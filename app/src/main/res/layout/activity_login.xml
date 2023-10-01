@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.login.LoginActivity"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/activity_main_root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <ImageView
+            android:id="@+id/activity_main_imageview_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/logo3"
+            android:layout_marginTop="30dp"
+            app:layout_constraintTop_toTopOf="@id/activity_main_root"
+            app:layout_constraintRight_toRightOf="@id/activity_main_root"
+            app:layout_constraintLeft_toLeftOf="@id/activity_main_root"
+            />
+        <TextView
+            android:id="@+id/activity_main_textview_multirun"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MULIURUN"
+            android:fontFamily="sans-serif-black"
+            android:textColor="#d0d7dc"
+            android:textAllCaps="true"
+            android:layout_marginTop="3dp"
+            app:layout_constraintStart_toStartOf="@id/activity_main_root"
+            app:layout_constraintEnd_toEndOf="@id/activity_main_root"
+            app:layout_constraintTop_toBottomOf="@id/activity_main_imageview_logo"
+            />
+
+        <TextView
+            android:id="@+id/activity_main_textview_tecINFO"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAllCaps="true"
+            android:text="INFORMATION TECHNOLOGY"
+            android:layout_marginTop="1dp"
+            android:textColor="#5a6ec3"
+            android:textSize="15sp"
+            android:fontFamily="sans-serif-black"
+            app:layout_constraintStart_toStartOf="@id/activity_main_root"
+            app:layout_constraintEnd_toEndOf="@id/activity_main_root"
+            app:layout_constraintTop_toBottomOf="@id/activity_main_textview_multirun"
+            />
+        <TextView
+            android:id="@+id/activity_main_textview_hello"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:text="مرحبا بك من جديد"
+            android:fontFamily="sans-serif"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="@id/activity_main_root"
+            app:layout_constraintEnd_toEndOf="@id/activity_main_root"
+            app:layout_constraintTop_toBottomOf="@id/activity_main_textview_tecINFO"
+            />
+
+        <TextView
+            android:id="@+id/activity_main_textview_sign"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:text="تسجيل دخول"
+            android:fontFamily="sans-serif"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="@id/activity_main_root"
+            app:layout_constraintEnd_toEndOf="@id/activity_main_root"
+            app:layout_constraintTop_toBottomOf="@id/activity_main_textview_hello"
+            />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/full_name_layout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:hint="اسم المستخدم"
+            app:endIconMode="clear_text"
+            android:layout_marginTop="30dp"
+            app:layout_constraintEnd_toEndOf="@id/activity_main_root"
+            app:layout_constraintStart_toStartOf="@id/activity_main_root"
+            app:layout_constraintTop_toBottomOf="@id/activity_main_textview_sign"
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/activity_main_edittext_password"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:hint="كلمه المرور "
+            app:endIconMode="password_toggle"
+            android:layout_marginTop="20dp"
+            android:drawableLeft="@drawable/ic_baseline_visibility_off_24"
+            app:layout_constraintEnd_toEndOf="@id/activity_main_root"
+            app:layout_constraintStart_toStartOf="@id/activity_main_root"
+            app:layout_constraintTop_toBottomOf="@id/full_name_layout"
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <TextView
+            android:id="@+id/activity_main_textview_errormessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="يوجد مدخل لم يتم ادخاله!"
+            android:textColor="#fc1010"
+            android:visibility="invisible"
+            android:fontFamily="sans-serif"
+            android:textSize="15dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintLeft_toLeftOf="@id/activity_main_root"
+            app:layout_constraintRight_toRightOf="@id/activity_main_root"
+            app:layout_constraintTop_toBottomOf="@id/activity_main_edittext_password"
+            />
+
+        <TextView
+            android:id="@+id/activity_main_textview_forgetPass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="نسيت كلمه المرور؟"
+            android:textColor="#3f3bf5"
+            android:fontFamily="sans-serif"
+            android:textSize="17dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="50dp"
+            app:layout_constraintRight_toRightOf="@id/activity_main_root"
+            app:layout_constraintTop_toBottomOf="@id/activity_main_textview_errormessage"
+            />
+
+        <Button
+            android:id="@+id/activity_main_button_create_an_account"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="#3f3bf5"
+            android:text="تسجيل دخول"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="@id/activity_main_root"
+            app:layout_constraintHorizontal_bias="0.508"
+            app:layout_constraintStart_toStartOf="@id/activity_main_root"
+            app:layout_constraintTop_toBottomOf="@id/activity_main_textview_forgetPass" />
+
+        <View
+            android:id="@+id/activity_main_view1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="220dp"
+            android:layout_marginTop="13dp"
+            android:layout_marginEnd="10dp"
+            android:background="#959595"
+            app:layout_constraintRight_toRightOf="@id/activity_main_root"
+            app:layout_constraintTop_toBottomOf="@id/activity_main_button_create_an_account"
+            />
+        <TextView
+            android:id="@+id/activity_main_textview_or"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="أو"
+            android:layout_marginTop="5dp"
+            android:textSize="20sp"
+            android:textColor="#959595"
+            app:layout_constraintRight_toLeftOf="@id/activity_main_view1"
+            app:layout_constraintLeft_toRightOf="@id/activity_main_view2"
+            app:layout_constraintTop_toBottomOf="@id/activity_main_button_create_an_account"
+            />
+        <View
+            android:id="@+id/activity_main_view2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="13dp"
+            android:layout_marginEnd="220dp"
+            android:background="#959595"
+            app:layout_constraintStart_toStartOf="@id/activity_main_root"
+            app:layout_constraintTop_toBottomOf="@id/activity_main_button_create_an_account"
+            />
+
+        <TextView
+            android:id="@+id/activity_main_textview_record_by_another_way"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="سجل عن طريق البريد الالكترونى "
+            android:textColor="#959595"
+            android:textSize="18sp"
+            app:layout_constraintTop_toBottomOf="@id/activity_main_textview_or"
+            app:layout_constraintEnd_toEndOf="@id/activity_main_root"
+            app:layout_constraintStart_toStartOf="@id/activity_main_root"
+            />
+
+        <Button
+            android:id="@+id/activity_main_button_create_facebookAccount"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="@color/white"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:fontFamily="sans-serif"
+            android:text="تسجيل دخول عن طريق الفيسبوك "
+            android:drawableLeft="@drawable/facebook"
+            app:layout_constraintEnd_toEndOf="@id/activity_main_root"
+            app:layout_constraintStart_toStartOf="@id/activity_main_root"
+            app:layout_constraintTop_toBottomOf="@id/activity_main_textview_record_by_another_way"
+            />
+
+        <Button
+            android:id="@+id/activity_main_button_create_googleAccount"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:backgroundTint="@color/white"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:fontFamily="sans-serif"
+            android:layout_marginTop="12dp"
+            android:drawableLeft="@drawable/search2"
+            android:text="تسجيل دخول عن طريق جوجل "
+            app:layout_constraintEnd_toEndOf="@id/activity_main_root"
+            app:layout_constraintStart_toStartOf="@id/activity_main_root"
+            app:layout_constraintTop_toBottomOf="@id/activity_main_button_create_facebookAccount"
+            />
+
+        <Button
+            android:id="@+id/activity_main_button_create_AppleAccount"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:backgroundTint="@color/white"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:fontFamily="sans-serif"
+            android:layout_marginTop="12dp"
+            android:drawableLeft="@drawable/apple"
+            android:text="تسجيل دخول عن طريق أبل  "
+            app:layout_constraintEnd_toEndOf="@id/activity_main_root"
+            app:layout_constraintStart_toStartOf="@id/activity_main_root"
+            app:layout_constraintTop_toBottomOf="@id/activity_main_button_create_googleAccount"
+            />
+
+        <TextView
+            android:id="@+id/activity_main_textview_no_have_an_account"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ليس لديك حساب؟"
+            android:layout_marginTop="15dp"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:fontFamily="sans-serif"
+            android:layout_marginRight="50dp"
+            app:layout_constraintRight_toRightOf="@id/activity_main_root"
+            app:layout_constraintTop_toBottomOf="@id/activity_main_button_create_AppleAccount"
+            />
+        <TextView
+            android:id="@+id/activity_main_textview_signup_newOne"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="أنشئ حسابك الان"
+            android:layout_marginTop="15dp"
+            android:textSize="18sp"
+            android:textColor="#3f3bf5"
+            android:paddingBottom="40dp"
+            android:fontFamily="sans-serif"
+            app:layout_constraintRight_toLeftOf="@id/activity_main_textview_no_have_an_account"
+            app:layout_constraintTop_toBottomOf="@id/activity_main_button_create_AppleAccount"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
+
+

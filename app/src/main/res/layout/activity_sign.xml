@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".ui.signup.SignActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/activity_sign_root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/activity_sign_textview_create_an_new_Account"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:fontFamily="sans-serif-black"
+            android:text="انشاء حساب جديد"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintLeft_toLeftOf="@id/activity_sign_root"
+            app:layout_constraintRight_toRightOf="@id/activity_sign_root"
+            app:layout_constraintTop_toTopOf="@id/activity_sign_root" />
+
+        <TextView
+            android:id="@+id/activity_sign_textview_fill_out_theform"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:fontFamily="sans-serif"
+            android:text="يرجى تعبئه  المعلومات التاليه لانشاء الحساب"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintLeft_toLeftOf="@id/activity_sign_root"
+            app:layout_constraintRight_toRightOf="@id/activity_sign_root"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/activity_sign_textview_create_an_new_Account" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/activity_sign_edittext_name"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:hint="اسم المستخدم"
+            app:endIconMode="clear_text"
+            android:layout_marginTop="30dp"
+            app:layout_constraintLeft_toLeftOf="@id/activity_sign_root"
+            app:layout_constraintRight_toRightOf="@id/activity_sign_root"
+            app:layout_constraintTop_toBottomOf="@id/activity_sign_textview_fill_out_theform"
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/activity_sign_textview_errorinuser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:padding="1dp"
+            android:text="يجب ادخال اسم المستخدم "
+            android:textColor="#fc1010"
+            android:drawableRight="@drawable/ic_baseline_error_outline_24"
+            android:fontFamily="sans-serif-black"
+            android:visibility="invisible"
+            android:layout_marginRight="70dp"
+            app:layout_constraintRight_toRightOf="@id/activity_sign_root"
+            app:layout_constraintTop_toBottomOf="@id/activity_sign_edittext_name"
+            />
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/activity_sign_edittext_email"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:hint="البريد الالكترونى  "
+            app:endIconMode="clear_text"
+            app:layout_constraintLeft_toLeftOf="@id/activity_sign_root"
+            app:layout_constraintRight_toRightOf="@id/activity_sign_root"
+            app:layout_constraintTop_toBottomOf="@id/activity_sign_textview_errorinuser"
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/activity_sign_textview_errorinemail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:padding="1dp"
+            android:text="يجب ادخال البريد الالكترونى "
+            android:textColor="#fc1010"
+            android:drawableRight="@drawable/ic_baseline_error_outline_24"
+            android:fontFamily="sans-serif-black"
+            android:visibility="invisible"
+            android:layout_marginRight="70dp"
+            app:layout_constraintRight_toRightOf="@id/activity_sign_root"
+            app:layout_constraintTop_toBottomOf="@id/activity_sign_edittext_email"
+            />
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/activity_sign_edittext_password"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:hint="كلمه المرور "
+            app:endIconMode="password_toggle"
+            android:layout_marginTop="20dp"
+            app:layout_constraintLeft_toLeftOf="@id/activity_sign_root"
+            app:layout_constraintRight_toRightOf="@id/activity_sign_root"
+            app:layout_constraintTop_toBottomOf="@id/activity_sign_edittext_email"
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/activity_sign_textview_errorinpassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:text="يجب ادخال كلمه المرور  "
+            android:textColor="#fc1010"
+            android:fontFamily="sans-serif-black"
+            android:visibility="invisible"
+            android:drawableRight="@drawable/ic_baseline_error_outline_24"
+            android:gravity="center"
+            app:layout_constraintLeft_toLeftOf="@id/activity_sign_root"
+            app:layout_constraintRight_toRightOf="@id/activity_sign_root"
+            app:layout_constraintTop_toBottomOf="@id/activity_sign_edittext_password"
+            />
+
+        <TextView
+            android:id="@+id/activity_main_textview_no_have_an_account"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="43dp"
+            android:fontFamily="sans-serif"
+            android:text="لديك حساب بالفعل؟"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintRight_toRightOf="@id/activity_sign_root"
+            app:layout_constraintTop_toBottomOf="@id/activity_sign_textview_errorinpassword" />
+
+        <TextView
+            android:id="@+id/activity_main_textview_signup_newOne"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="تسجيل دخول"
+            android:textSize="18sp"
+            android:textColor="#3f3bf5"
+            android:fontFamily="sans-serif"
+            android:layout_marginTop="10dp"
+            app:layout_constraintRight_toLeftOf="@id/activity_main_textview_no_have_an_account"
+           app:layout_constraintTop_toBottomOf="@id/activity_sign_textview_errorinpassword"
+            />
+
+        <Button
+            android:id="@+id/activity_main_button_create_an_account"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="15dp"
+            android:backgroundTint="#3f3bf5"
+            android:text="انشاء حساب "
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="@id/activity_sign_root"
+            app:layout_constraintStart_toStartOf="@id/activity_sign_root"
+            app:layout_constraintTop_toBottomOf="@id/activity_main_textview_no_have_an_account" />
+
+        <View
+            android:id="@+id/activity_main_view1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="220dp"
+            android:layout_marginTop="13dp"
+            android:layout_marginEnd="10dp"
+            android:background="#959595"
+            app:layout_constraintRight_toRightOf="@id/activity_sign_root"
+            app:layout_constraintTop_toBottomOf="@id/activity_main_button_create_an_account"
+            />
+        <TextView
+            android:id="@+id/activity_main_textview_or"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="أو"
+            android:layout_marginTop="5dp"
+            android:textSize="20sp"
+            android:textColor="#959595"
+            app:layout_constraintRight_toLeftOf="@id/activity_main_view1"
+            app:layout_constraintLeft_toRightOf="@id/activity_main_view2"
+            app:layout_constraintTop_toBottomOf="@id/activity_main_button_create_an_account"
+            />
+        <View
+            android:id="@+id/activity_main_view2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="13dp"
+            android:layout_marginEnd="220dp"
+            android:background="#959595"
+            app:layout_constraintStart_toStartOf="@id/activity_sign_root"
+            app:layout_constraintTop_toBottomOf="@id/activity_main_button_create_an_account"
+            />
+
+        <TextView
+            android:id="@+id/activity_main_textview_record_by_another_way"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="سجل عن طريق البريد الالكترونى "
+            android:textColor="#959595"
+            android:textSize="18sp"
+            app:layout_constraintTop_toBottomOf="@id/activity_main_textview_or"
+            app:layout_constraintEnd_toEndOf="@id/activity_sign_root"
+            app:layout_constraintStart_toStartOf="@id/activity_sign_root"
+            />
+
+        <Button
+            android:id="@+id/activity_main_button_create_facebookAccount"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="@color/white"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:fontFamily="sans-serif"
+            android:text="تسجيل دخول عن طريق الفيسبوك "
+            android:drawableLeft="@drawable/facebook"
+            app:layout_constraintEnd_toEndOf="@id/activity_sign_root"
+            app:layout_constraintStart_toStartOf="@id/activity_sign_root"
+            app:layout_constraintTop_toBottomOf="@id/activity_main_textview_record_by_another_way"
+            />
+
+        <Button
+            android:id="@+id/activity_main_button_create_googleAccount"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:backgroundTint="@color/white"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:fontFamily="sans-serif"
+            android:layout_marginTop="12dp"
+            android:drawableLeft="@drawable/search2"
+            android:text="تسجيل دخول عن طريق جوجل "
+            app:layout_constraintEnd_toEndOf="@id/activity_sign_root"
+            app:layout_constraintStart_toStartOf="@id/activity_sign_root"
+            app:layout_constraintTop_toBottomOf="@id/activity_main_button_create_facebookAccount"
+            />
+
+        <Button
+            android:id="@+id/activity_main_button_create_AppleAccount"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:backgroundTint="@color/white"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:fontFamily="sans-serif"
+            android:layout_marginTop="12dp"
+            android:drawableLeft="@drawable/apple"
+            android:text="تسجيل دخول عن طريق أبل  "
+            android:layout_marginBottom="40dp"
+            app:layout_constraintEnd_toEndOf="@id/activity_sign_root"
+            app:layout_constraintStart_toStartOf="@id/activity_sign_root"
+            app:layout_constraintTop_toBottomOf="@id/activity_main_button_create_googleAccount"
+            />
+
+        <View
+            app:layout_constraintRight_toRightOf="@id/activity_sign_root"
+            app:layout_constraintTop_toBottomOf="@id/activity_main_button_create_AppleAccount"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
